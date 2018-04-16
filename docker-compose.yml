@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  commercelite:
+    image: commercelite
+    build:
+      context: .\dot-net\webAPI\CommerceLite\CommerceLite
+      dockerfile: Dockerfile
