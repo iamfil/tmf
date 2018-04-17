@@ -1,8 +1,15 @@
 version: '3'
 
 services:
+  commercelite-sql:
+    image: "microsoft/mssql-server-windows-express"
+    container_name: "commercelite-sql"
+    environment:
+      ACCEPT_EULA: "Y"
+      sa_password: "Passw0rd!"
   commercelite:
     image: commercelite
+    container_name: "commercelite-api"
     build:
       context: .\dot-net\webAPI\CommerceLite\CommerceLite
       dockerfile: Dockerfile
