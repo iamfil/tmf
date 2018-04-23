@@ -1,0 +1,31 @@
+﻿{% extends "app/layout.html" %}
+
+{% block content %}
+
+<h2>{{ title }}</h2>
+
+<p>All of our lovely customers are below.</p>
+
+<table id="productTypeTable" class="table table-striped table-hover">
+    <thead>
+        <tr>
+            <th>Product Type ID</th>
+            <th>Type</th>
+            <th>Date Created</th>
+            <th>Date Modified</th>
+        </tr>
+    </thead>
+</table>
+
+{% endblock %}
+
+{% block scripts %}
+<script>
+    $(document).ready(function(){
+        $('#productTypeTable').DataTable({
+            data:{{productTypesList|safe}},
+            columns: [{data: 'ProductTypeId'}, {data: 'Type'}, {data: 'DateCreated'}, {data: 'DateModified'}]            
+        });    
+    });
+</script>
+{% endblock %}

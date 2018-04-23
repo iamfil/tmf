@@ -124,3 +124,6 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATIC_ROOT = posixpath.join(*(BASE_DIR.split(os.path.sep) + ['static']))
+
+#COMMERCE_LITE_API_ENDPOINT = "http://commercelite-api/api/"
+COMMERCE_LITE_API_ENDPOINT = "http://172.29.44.215/api/"

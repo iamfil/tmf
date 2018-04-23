@@ -1,0 +1,34 @@
+﻿{% extends "app/layout.html" %}
+
+{% block content %}
+
+<h2>{{ title }}</h2>
+
+<p>All of our offers are below.</p>
+
+<table id="offersTable" class="table table-striped table-hover">
+    <thead>
+        <tr>
+            <th>Offer ID</th>
+            <th>Product ID</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Date Created</th>
+            <th>Number Of Months</th>
+            <th>Date Modified</th>
+        </tr>
+    </thead>
+</table>
+
+{% endblock %}
+
+{% block scripts %}
+<script>
+    $(document).ready(function(){
+        $('#offersTable').DataTable({
+            data:{{offerList|safe}},
+            columns: [{data: 'OfferId'}, {data: 'ProductId'}, {data: 'Description'}, {data: 'Price'}, {data: 'DateCreated'}, {data: 'NumberOfMonths'}, {data: 'DateModified'}]            
+        });    
+    });
+</script>
+{% endblock %}

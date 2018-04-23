@@ -35,3 +35,12 @@ https://docs.djangoproject.com/en/2.0/intro/tutorial01/
 * Anything you did to make the applications your own
 
 Again, thank you for taking the time to complete this skills test, have fun, and complete as much as you can in 8-10 hours.
+
+Instructions for Running Locally
+
+Visual Studio Community Edition, Latest version
+	- .NET Desktop Development
+	- ASP.NET and web development
+	- Python Development
+	- .NET 4.7.1 Targeting and SDK
+Docker for Windows, Latest version

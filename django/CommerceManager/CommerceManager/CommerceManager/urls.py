@@ -13,12 +13,8 @@ import app.views
 # from django.conf.urls import include
 # from django.contrib import admin
 # admin.autodiscover()
-
-urlpatterns = [
-    # Examples:
+urlpatterns = [# Examples:
     url(r'^$', app.views.home, name='home'),
-    url(r'^contact$', app.views.contact, name='contact'),
-    url(r'^about', app.views.about, name='about'),
     url(r'^login/$',
         django.contrib.auth.views.login,
         {
@@ -43,4 +39,20 @@ urlpatterns = [
 
     # Uncomment the next line to enable the admin:
     # url(r'^admin/', include(admin.site.urls)),
+
+    # Customer views
+    url(r'^customers$', app.views.customersIndex, name='customers'),
+
+    # Product views
+    url(r'^products$', app.views.productsIndex, name='products'),
+
+    # Product Types
+    url(r'^producttypes', app.views.producttypesIndex, name='producttypes'),
+
+    # Order views
+    url(r'^orders', app.views.ordersIndex, name='orders'),
+
+    # Offer views
+    url(r'^offers', app.views.offersIndex, name='offers'),
+    
 ]

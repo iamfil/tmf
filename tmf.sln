@@ -11,6 +11,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	ProjectSection(SolutionItems) = preProject
 		dot-net\db-scripts\CreateDatabase.sql = dot-net\db-scripts\CreateDatabase.sql
 		dot-net\db-scripts\Dockerfile = dot-net\db-scripts\Dockerfile
+		README.md = README.md
 		dot-net\db-scripts\SchemaCreation.sql = dot-net\db-scripts\SchemaCreation.sql
 		dot-net\db-scripts\SeedData.sql = dot-net\db-scripts\SeedData.sql
 	EndProjectSection
