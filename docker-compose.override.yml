@@ -1,9 +1,12 @@
 version: '3'
 
 services:
-  commercelite:
+  commercelite-api:
     ports:
       - "80"
+  commercelite-manager:
+    ports:
+      - "8000:8000"
 networks:
   default:
     external:

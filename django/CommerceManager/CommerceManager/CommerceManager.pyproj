@@ -70,6 +70,7 @@
     <Content Include="app\templates\app\orders\index.html" />
     <Content Include="app\templates\app\products\index.html" />
     <Content Include="app\templates\app\productTypes\index.html" />
+    <Content Include="Dockerfile" />
     <Content Include="requirements.txt" />
     <Content Include="db.sqlite3" />
     <Content Include="app\static\app\content\bootstrap.css" />

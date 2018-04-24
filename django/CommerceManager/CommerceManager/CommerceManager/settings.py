@@ -26,7 +26,7 @@ SECRET_KEY = 'aa1fffd3-73d2-4990-9194-6e923a95864a'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -125,5 +125,4 @@ STATIC_URL = '/static/'
 
 STATIC_ROOT = posixpath.join(*(BASE_DIR.split(os.path.sep) + ['static']))
 
-#COMMERCE_LITE_API_ENDPOINT = "http://commercelite-api/api/"
-COMMERCE_LITE_API_ENDPOINT = "http://172.29.44.215/api/"
+COMMERCE_LITE_API_ENDPOINT = "http://commercelite-api/api/"
