@@ -49,13 +49,11 @@ else
 Write-Host "`nBuilding solution..."
 devenv tmf.sln /build Debug
 
-Write-Host "`nRunning Docker Compose Up..."
-docker build --no-cache .\django\CommerceManager\CommerceManager
-docker-compose  -f "docker-compose.yml" -f "docker-compose.override.yml" -f "obj\Docker\docker-compose.vs.debug.g.yml" up -d --force-recreate
-
+Write-Host "`nRunning Docker build and compose Up..."
+docker-compose  -f "docker-compose.yml" -f "docker-compose.override.yml" -f "obj\Docker\docker-compose.vs.debug.g.yml" build --no-cache
+docker-compose  -f "docker-compose.yml" -f "docker-compose.override.yml" -f "obj\Docker\docker-compose.vs.debug.g.yml" up -d
 
 $commercelitesql = docker inspect --format="{{range .NetworkSettings.Networks}}{{.IPAddress}} {{end}}" commercelite-sql
-Write-Host "`nCommerceLite SQL running at $commercelitesql" -ForegroundColor Green
 
 while($true)
 {
@@ -78,7 +76,8 @@ while($true)
 sqlcmd -S $commercelitesql -U SA -P 'Passw0rd!' -i .\dot-net\db-scripts\CreateDatabase.sql
 sqlcmd -S $commercelitesql -U SA -P 'Passw0rd!' -i .\dot-net\db-scripts\SchemaCreation.sql 
 sqlcmd -S $commercelitesql -U SA -P 'Passw0rd!' -i .\dot-net\db-scripts\SeedData.sql
-sqlcmd -S $commercelitesql -U SA -P 'Passw0rd!' -i .\dot-net\db-scripts\SeedMoreData.sql
+
+Write-Host "`nCommerceLite SQL running at $commercelitesql" -ForegroundColor Green
 
 $commerceliteapi = docker inspect --format="{{range .NetworkSettings.Networks}}{{.IPAddress}} {{end}}" commercelite-api
 Write-Host "`nCommerceLite API running at $commerceliteapi" -ForegroundColor Green
