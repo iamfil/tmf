@@ -37,7 +37,7 @@ https://docs.djangoproject.com/en/2.0/intro/tutorial01/
 Again, thank you for taking the time to complete this skills test, have fun, and complete as much as you can in 8-10 hours.
 
 # Local Development Deployment Instructions
-The TMF skills test can be ran locally by using the Run locally.ps1 PowerShell script. The script will detect where Visual Studio is installed, setup the build environment for building the applications, downloaded the necessary NuGet packages, build the applications, build the Docker images and then start the Docker containers.
+The TMF skills test can be ran locally by using the `Run locally.ps1` PowerShell script. The script will detect where Visual Studio is installed, setup the build environment for building the applications, downloaded the necessary NuGet packages, build the applications, build the Docker images and then start the Docker containers.
 
 To start, ensure that you have the following installed:
 
@@ -51,4 +51,4 @@ To start, ensure that you have the following installed:
 * PowerShell Execution Policy that allows for running scripts
 
 ## Instructions for Running Locally
-With the above requirements installed, simply run the Run locally.ps1 script and wait patiently for the applications to be ready.
+With the above requirements installed, simply run the `Run locally.ps1` script and wait patiently for the applications to be ready.
