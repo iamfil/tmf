@@ -45,8 +45,11 @@ else
     Write-Host "Visual Studio 2017 not foud for building. :(" -ForegroundColor Red
 }
 
+Write-Host "`nRestoring NuGet packages..."
+.\nuget.exe restore .\dot-net\webAPI\CommerceLite\CommerceLite.sln
 
 Write-Host "`nBuilding solution..."
+devenv .\dot-net\webAPI\CommerceLite\CommerceLite.sln /build Debug
 devenv tmf.sln /build Debug
 
 Write-Host "`nRunning Docker build and compose Up..."
