@@ -36,11 +36,19 @@ https://docs.djangoproject.com/en/2.0/intro/tutorial01/
 
 Again, thank you for taking the time to complete this skills test, have fun, and complete as much as you can in 8-10 hours.
 
-Instructions for Running Locally
+# Local Development Deployment Instructions
+The TMF skills test can be ran locally by using the Run locally.ps1 PowerShell script. The script will detect where Visual Studio is installed, setup the build environment for building the applications, downloaded the necessary NuGet packages, build the applications, build the Docker images and then start the Docker containers.
 
-Visual Studio Community Edition, Latest version
-	- .NET Desktop Development
-	- ASP.NET and web development
-	- Python Development
-	- .NET 4.7.1 Targeting and SDK
-Docker for Windows, Latest version
+To start, ensure that you have the following installed:
+
+* Visual Studio Community 2017
+  * .NET Desktop Development installed
+  * ASP.NET and Web Development installed
+  * .NET 4.7.1 Targeting and SDK installed
+* Docker for Windows
+  * Hyper-V containers support
+* Hyper-V enabled and Containers in Windows
+* PowerShell Execution Policy that allows for running scripts
+
+## Instructions for Running Locally
+With the above requirements installed, simply run the Run locally.ps1 script and wait patiently for the applications to be ready.
